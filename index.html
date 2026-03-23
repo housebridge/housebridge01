@@ -254,4 +254,94 @@
                     class="inline-flex items-center text-main-green hover:opacity-70 transition-all border-b-2 border-main-green pb-1 font-bold">
                 想いを詳しく読む
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 mb-20 text-center">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+            <div class="bg-main-green text-white p-12 md:p-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 tracking-tight">まずはあなたの現在地を整理しませんか？</h2>
+                <p class="mb-10 text-lg opacity-90 leading-relaxed text-white/90">
+                    初回無料相談（60分）を受け付けています。<br>
+                    <span class="inline-flex items-center gap-1 bg-white/20 text-white text-sm font-bold px-3 py-1 rounded-full my-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+                        オンライン相談も可能です
+                    </span><br>
+                    無理な勧誘はありませんので、お気軽にご予約ください。
+                </p>
+                <a href="https://forms.gle/e6nLhhs6Rp1or7BS8" 
+                    class="inline-block bg-accent-orange text-white text-xl md:text-2xl font-bold py-5 px-12 rounded-xl shadow-lg btn-hover transition-all">
+                    無料で相談を予約する
+                </a>
+                <p class="mt-8 text-sm opacity-60 text-white/70 italic">※外部のGoogleフォームへ移動します</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-main-green text-white/60 py-16 text-center px-4">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-white/80 text-sm mb-6 tracking-widest font-medium uppercase">建築家ネットワーク・ナビ 大阪ナビ</p>
+            <a href="https://house-bridge.jp/" class="inline-block hover:opacity-80 transition-all mb-6" title="ハウス・ブリッジ公式サイトへ">
+                <img src="images/hb_logo.svg" alt="HOUSE BRIDGE" class="h-10 md:h-12 w-auto brightness-0 invert mx-auto">
+            </a>
+            <p class="text-sm mb-6 italic font-light">「情報の波に疲れた人を救う、温かな港」</p>
+            <a href="https://house-bridge.jp/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 border border-white/40 text-white/90 text-sm font-bold px-6 py-3 rounded-full hover:bg-white/10 transition-all mb-10">
+                公式サイトはこちら
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </a>
+            <div class="flex justify-center text-sm mb-10 text-white/90">
+                <span class="font-bold border-b border-white/20 pb-1">株式会社ハウス・ブリッジ</span>
+            </div>
+            <p class="text-xs tracking-tighter">&copy; 2026 House Bridge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="profileModalOverlay" class="modal-overlay" onclick="closeProfileModalOutside(event)">
+        <div class="modal-box" style="max-width:560px;">
+            <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 font-bold text-sm transition-colors" onclick="closeProfileModal()">✕</button>
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 shadow">
+                    <img src="images/taniprof.jpg" alt="谷" class="w-full h-full object-cover">
+                </div>
+                <div class="text-left">
+                    <p class="font-bold text-main-green text-base">谷</p>
+                    <p class="text-xs text-gray-400">家づくりコーディネーター</p>
+                </div>
+            </div>
+            <div class="text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-4">
+                家づくりは人生で一番大きな買い物と言われますが、実はその「買い方」を教えてくれる場所は驚くほど少ないのが現状です。私は、特定の建築会社やハウスメーカーの営業マンではありません。そのため、お客様に対して特定の会社を強引に勧める必要も、不都合な真実を隠す必要もありません。<br><br>
+                私の役割は、住宅業界の「プロ側の理論」ではなく、お客様の「暮らしの幸福」を最優先に考え、中立な立場からアドバイスをすることです。予算の立て方から、自分たちに本当に合う建築先の見極め方まで。あなたの家族にとって何が最善かを一緒に考え抜き、理想の家づくりというゴールまで二人三脚で伴走すること。それが、ハウス・ブリッジとしての私の仕事です。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 「私たちにできること」のモーダル処理（必要に応じて関数の中身を実装してください）
+        function openModal(index) {
+            console.log("Modal index clicked: ", index);
+            // 例: 対象のモーダルを表示する処理などをここに記述
+        }
+
+        // プロフィールモーダルの開閉処理
+        function openProfileModal() {
+            document.getElementById('profileModalOverlay').classList.add('active');
+        }
+
+        function closeProfileModal() {
+            document.getElementById('profileModalOverlay').classList.remove('active');
+        }
+
+        function closeProfileModalOutside(event) {
+            if (event.target === document.getElementById('profileModalOverlay')) {
+                closeProfileModal();
+            }
+        }
+    </script>
+</body>
+</html>
