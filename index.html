@@ -6,7 +6,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-57FSGW9P');</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,6 +14,30 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://house-bridge.jp/">
     <meta property="og:image" content="images/DSC1062.jpg">
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vchwwr9akr");
+    </script>
+
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '4241001489490725');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=4241001489490725&ev=PageView&noscript=1"
+    /></noscript>
 
     <title>ハウス・ブリッジ | 家づくり迷子をサポートします。建築家ネットワーク・ナビ</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -53,7 +76,16 @@
             scroll-behavior: smooth;
         }
 
-        /* Modal Style */
+        /* Accordion Style */
+        .message-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .message-content.open {
+            max-height: 1000px;
+        }
+        /* Modal */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -93,14 +125,13 @@
 <body class="overflow-x-hidden">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57FSGW9P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
             <a href="https://house-bridge.jp/" class="flex items-center hover:opacity-80 transition-all" title="ハウス・ブリッジ公式サイトへ">
                 <img src="images/hb_logo.svg" alt="HOUSE BRIDGE ハウス・ブリッジ公式サイト" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <span class="font-bold text-xl tracking-wider text-main-green hidden" style="display:none;">HOUSE BRIDGE</span>
             </a>
-            <a href="https://lin.ee/8MXc8uF"
+            <a href="https://lin.ee/8MXc8uF" onclick="fbq('track', 'Lead');"
                 class="hidden md:flex items-center gap-2 bg-[#06C755] text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
                 LINE友だち追加
@@ -108,7 +139,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="pt-24 pb-4 md:pt-40 md:pb-20 px-4 text-center relative overflow-hidden" style="background-image: url('images/DSC1062.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-[#F5F1ED]/80"></div>
         <div class="max-w-3xl mx-auto relative z-10">
@@ -116,21 +147,11 @@
                 今の家づくりで怖いのは、価格の高騰だけではなく、<span class="text-accent-orange">相談相手を間違えること</span>です。
             </h1>
             <p class="text-lg md:text-xl mb-10 text-gray-600 font-medium leading-relaxed">
-                家づづりの失敗のほとんどは、知識不足ではなく<br>
+                家づくりの失敗のほとんどは、知識不足ではなく<br>
                 <span class="font-bold text-main-green">相談相手の選び間違い</span>から起きています。<br>
                 コーディネーターは、あなたの側に立つ唯一の専門家です。
             </p>
-            <div class="mb-6 inline-block relative">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#06C755] to-[#4CD964] blur-md opacity-40 rounded-full"></div>
-                <div class="relative bg-main-green border border-[#06C755] px-6 md:px-8 py-3 rounded-full shadow-xl">
-                    <p class="text-white font-bold text-sm md:text-base tracking-wider flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
-                        LINE登録で【家づくり自己チェックシート】を無料プレゼント！
-                    </p>
-                </div>
-            </div>
-            <br>
-            <a href="https://lin.ee/8MXc8uF"
+            <a href="https://lin.ee/8MXc8uF" onclick="fbq('track', 'Lead');"
                class="inline-flex items-center gap-3 bg-[#06C755] text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg btn-hover transition-all mb-6 md:mb-0">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
                 チェックシートを無料で受け取る
@@ -139,7 +160,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- 完成物件写真ギャラリー -->
     <section class="py-16 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-10">
@@ -160,7 +181,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- できること -->
     <section class="py-20 px-4 bg-[#F5F1ED]">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
@@ -169,6 +190,7 @@
                 <p class="text-gray-600">各項目をタップすると詳しい内容をご覧いただけます。</p>
             </div>
             <div class="space-y-4">
+                <!-- 資金計画 -->
                 <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(0)">
                     <div class="flex items-center gap-5">
                         <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
@@ -178,6 +200,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
+                <!-- 土地探し -->
                 <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(1)">
                     <div class="flex items-center gap-5">
                         <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
@@ -187,6 +210,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
+                <!-- 建築家・設計 -->
                 <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(2)">
                     <div class="flex items-center gap-5">
                         <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
@@ -196,6 +220,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
+                <!-- 工務店選び -->
                 <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(3)">
                     <div class="flex items-center gap-5">
                         <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
@@ -205,6 +230,7 @@
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
+                <!-- メンテナンス -->
                 <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(4)">
                     <div class="flex items-center gap-5">
                         <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
@@ -218,7 +244,7 @@
         </div>
     </section>
 
-    <!-- Coordinator Section -->
+    <!-- 担当コーディネーター紹介 -->
     <section class="py-20 px-4 bg-white">
         <div class="max-w-2xl mx-auto text-center">
             <p class="text-sm font-bold tracking-widest text-accent-orange uppercase mb-6">Your Coordinator</p>
@@ -244,15 +270,14 @@
         </div>
     </section>
 
-    <!-- LINE登録 & チェックシート Section -->
-    <section id="contact" class="py-20 px-4 mb-20">
-        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
-            <div class="bg-main-green text-white p-10 md:p-16 text-center">
+    <section id="contact" class="py-20 px-4 mb-20 text-center">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+            <div class="bg-main-green text-white p-12 md:p-16">
                 <p class="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-6">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
                     LINE登録で無料プレゼント
                 </p>
-                <h2 class="text-2xl md:text-4xl font-bold mb-4 tracking-tight">家づくり、何から始めればいい？<br>まずは自己チェックから。</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 tracking-tight">家づくり、何から始めればいい？<br>まずは自己チェックから。</h2>
                 <p class="mb-4 text-lg leading-relaxed text-white/90">
                     LINE友だち追加で<br class="md:hidden">
                     <span class="font-bold text-white text-xl md:text-2xl">「家づくり自己チェックシート」</span><br>
@@ -263,74 +288,7 @@
                     <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 家づくりの「次の一歩」が明確になる</li>
                     <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 後日、コーディネーターから個別アドバイスも</li>
                 </ul>
-
-                <!-- 5大特典 Bonus -->
-                <div class="bg-white/5 border border-white/20 rounded-3xl p-6 md:p-10 mb-12 text-left relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-accent-orange text-white text-[10px] md:text-xs font-bold px-4 py-1 rounded-bl-xl tracking-tighter uppercase font-mono">Bonus Gift</div>
-
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
-                        <h3 class="text-xl md:text-2xl font-bold flex items-center gap-3">
-                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-accent-orange text-white text-base">5</span>
-                            さらに、LINE登録者限定で5大資料もプレゼント
-                        </h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-xl border border-white/10 hover:border-white/30 transition-all">
-                            <span class="text-accent-orange mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </span>
-                            <div>
-                                <p class="font-bold text-sm md:text-base leading-tight mb-1">① 住宅予算セルフチェックシート</p>
-                                <p class="text-[10px] md:text-xs text-white/60">手取り月収や年齢から、将来を考えた「返せる額」を自動計算します。</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-xl border border-white/10 hover:border-white/30 transition-all">
-                            <span class="text-accent-orange mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </span>
-                            <div>
-                                <p class="font-bold text-sm md:text-base leading-tight mb-1">② 間取り判断チェックリスト</p>
-                                <p class="text-[10px] md:text-xs text-white/60">設計図をもらった際、後悔しないために確認すべき7つのポイントを凝縮。</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-xl border border-white/10 hover:border-white/30 transition-all">
-                            <span class="text-accent-orange mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </span>
-                            <div>
-                                <p class="font-bold text-sm md:text-base leading-tight mb-1">③ 家づくりの判断基準要約カード</p>
-                                <p class="text-[10px] md:text-xs text-white/60">「誰と建てるか」より前に大切な「家づくりの順番」をカード化しました。</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-xl border border-white/10 hover:border-white/30 transition-all">
-                            <span class="text-accent-orange mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </span>
-                            <div>
-                                <p class="font-bold text-sm md:text-base leading-tight mb-1">④ 家づくり生活チェックシート</p>
-                                <p class="text-[10px] md:text-xs text-white/60">家族全員で記入して、今の住まいへの不満や新居への夢を整理できます。</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 bg-white/10 p-4 rounded-xl border border-white/10 hover:border-white/30 transition-all md:col-span-2">
-                            <span class="text-accent-orange mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </span>
-                            <div>
-                                <p class="font-bold text-sm md:text-base leading-tight mb-1">⑤ 総予算計画書テンプレート</p>
-                                <p class="text-[10px] md:text-xs text-white/60">建物代以外にかかる外構、諸費用、家具家電など。家づくりの「全費用」を管理できます。</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 flex items-center justify-center md:justify-start gap-2 text-xs text-white/50 bg-black/10 p-3 rounded-lg border border-white/5">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent-orange flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <p>すべての資料は建築家ネットワーク・ナビオリジナル資料です。<strong>LINE登録後にお届けします。</strong></p>
-                    </div>
-                </div>
-
-                <!-- CTA Button -->
-                <a href="https://lin.ee/8MXc8uF"
+                <a href="https://lin.ee/8MXc8uF" onclick="fbq('track', 'Lead');"
                     class="inline-flex items-center gap-3 bg-[#06C755] text-white text-xl md:text-2xl font-bold py-5 px-12 rounded-xl shadow-lg btn-hover transition-all">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
                     LINEで無料チェックシートを受け取る
@@ -365,34 +323,106 @@
     <div id="profileModalOverlay" class="modal-overlay" onclick="closeProfileModalOutside(event)">
         <div class="modal-box" style="max-width:560px;">
             <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 font-bold text-sm transition-colors" onclick="closeProfileModal()">✕</button>
-            <div class="flex items-center gap-4 mb-4 text-left">
+            <div class="flex items-center gap-4 mb-4">
                 <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 shadow">
                     <img src="images/taniprof.jpg" alt="谷" class="w-full h-full object-cover">
                 </div>
-                <div>
-                    <p class="font-bold text-main-green text-base">谷 小枝</p>
+                <div class="text-left">
+                    <p class="font-bold text-main-green text-base">谷</p>
                     <p class="text-xs text-gray-400">家づくりコーディネーター</p>
                 </div>
             </div>
-            <div class="text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4 mt-4 text-left">
+            <div class="w-12 h-0.5 bg-accent-orange mb-5"></div>
+            <p class="text-gray-600 leading-loose text-sm md:text-base">
                 家づくりは人生で一番大きな買い物と言われますが、実はその「買い方」を教えてくれる場所は驚くほど少ないのが現状です。私は、特定の建築会社やハウスメーカーの営業マンではありません。そのため、お客様に対して特定の会社を強引に勧める必要も、不都合な真実を隠す必要もありません。<br><br>
                 私の役割は、住宅業界の「プロ側の理論」ではなく、お客様の「暮らしの幸福」を最優先に考え、中立な立場からアドバイスをすることです。予算の立て方から、自分たちに本当に合う建築先の見極め方まで。あなたの家族にとって何が最善かを一緒に考え抜き、理想の家づくりというゴールまで二人三脚で伴走すること。それが、ハウス・ブリッジとしての私の仕事です。
-            </div>
+            </p>
         </div>
     </div>
 
+    <!-- Modal -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModalOutside(event)">
+        <div class="modal-box" id="modalBox">
+            <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 font-bold text-sm transition-colors" onclick="closeAllModals()">✕</button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                    <svg id="modalIconSvg" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+                </div>
+                <h3 id="modalTitle" class="text-xl font-bold text-main-green"></h3>
+            </div>
+            <div class="w-12 h-0.5 bg-accent-orange mb-5"></div>
+            <p id="modalText" class="text-gray-600 leading-relaxed text-sm md:text-base"></p>
+        </div>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-50 md:hidden">
+        <a href="https://lin.ee/8MXc8uF" onclick="fbq('track', 'Lead');"
+           class="flex flex-col items-center justify-center w-20 h-20 bg-[#06C755] text-white rounded-full shadow-2xl transition-all btn-hover border-2 border-white/20 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mb-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <span class="text-[10px] font-bold leading-tight">LINE<br>友だち追加</span>
+        </a>
+    </div>
+
     <script>
-        // Modal functions
+        // ── モーダルデータ ──────────────────────────────────
+        const modalData = [
+            {
+                title: '資金計画サポート',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+                text: '住宅ローンで大切なのは「借りられる額」ではなく「無理なく返せる額」です。教育費・老後資金も含めたライフプランを一緒に整理し、家づくりの土台となる本当の予算を明確にします。金融機関の選び方や返済シミュレーションなど、お金の不安を解消するところからサポートします。'
+            },
+            {
+                title: '土地探しサポート',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>',
+                text: '土地は単体で判断せず、建物とのバランスや予算配分・将来の暮らし方を合わせて考えることが重要です。条件が悪く見える土地でも、プランニング次第で理想の家は実現できます。良い土地との出会いを逃さないための準備から、購入判断までをサポートします。'
+            },
+            {
+                title: '建築家探し・設計アドバイス',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>',
+                text: '建築家との家づくりは高嶺の花ではありません。大切なのはデザインだけでなく、人柄・相性・コミュニケーションスタイルです。あなた家族の価値観と暮らし方を丁寧にヒアリングした上で、最適な建築家とのマッチングと設計打合せをスムーズに進めるアドバイスをします。'
+            },
+            {
+                title: '工務店選びサポート',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>',
+                text: '工務店選びは見積金額だけで判断するのは危険です。施工実績・現場管理体制・アフターサービスの充実度など、複数の視点で総合判断する必要があります。中立な立場で複数の工務店を比較検討し、あなたの予算と要望に本当に合ったパートナー選びをサポートします。'
+            },
+            {
+                title: 'アウターメンテナンスアドバイス',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>',
+                text: '家は完成してからが本当のスタートです。外壁・屋根・設備機器は適切な時期にメンテナンスを行うことで住宅の資産価値を守り、将来の大規模修繕費用を抑えられます。完成後も安心して暮らし続けるための維持管理計画について、わかりやすくアドバイスします。'
+            }
+        ];
+
+        // ── モーダル開閉 ────────────────────────────────────
         function openModal(index) {
-            console.log("Service Modal clicked: ", index);
+            const data = modalData[index];
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalText').textContent  = data.text;
+            document.getElementById('modalIconSvg').innerHTML = data.iconHtml;
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
+        function closeAllModals() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOutside(event) {
+            if (event.target === document.getElementById('modalOverlay')) {
+                closeAllModals();
+            }
+        }
+
+        // ── プロフィールモーダル ────────────────────────────
         function openProfileModal() {
             document.getElementById('profileModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeProfileModal() {
             document.getElementById('profileModalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
         }
 
         function closeProfileModalOutside(event) {
@@ -400,6 +430,14 @@
                 closeProfileModal();
             }
         }
+
+        // Escキーでどのモーダルも閉じられるように
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAllModals();
+                closeProfileModal();
+            }
+        });
     </script>
 </body>
 </html>
