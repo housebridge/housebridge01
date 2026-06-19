@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-57FSGW9P');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="ハウス・ブリッジ | 家づくり迷子をサポートします">
+    <meta property="og:description" content="中立な第三者として、あなたの理想の家づくりに伴走します。LINE登録で家づくり自己チェックシートを無料プレゼント。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://house-bridge.jp/">
+    <meta property="og:image" content="images/DSC1062.jpg">
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vchwwr9akr");
+    </script>
+
+    <title>ハウス・ブリッジ | 家づくり迷子をサポートします。建築家ネットワーク・ナビ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-beige: #F5F1ED;
+            --main-green: #134887;
+            --accent-orange: #E59545;
+            --text-gray: #4A4A4A;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-beige);
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+        .text-main-green { color: var(--main-green); }
+        .bg-main-green { background-color: var(--main-green); }
+        .text-accent-orange { color: var(--accent-orange); }
+        .bg-accent-orange { background-color: var(--accent-orange); }
+        .border-accent-orange { border-color: var(--accent-orange); }
+
+        .btn-hover:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Accordion Style */
+        .message-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .message-content.open {
+            max-height: 1000px;
+        }
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-box {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem 2rem 2.5rem;
+            max-width: 480px;
+            width: 100%;
+            position: relative;
+            animation: modalIn 0.25s ease;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .modal-card {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .modal-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57FSGW9P"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="https://house-bridge.jp/" class="flex items-center hover:opacity-80 transition-all" title="ハウス・ブリッジ公式サイトへ">
+                <img src="images/hb_logo.svg" alt="HOUSE BRIDGE ハウス・ブリッジ公式サイト" class="h-8 md:h-10 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="font-bold text-xl tracking-wider text-main-green hidden" style="display:none;">HOUSE BRIDGE</span>
+            </a>
+            <a href="https://lin.ee/8MXc8uF"
+                class="hidden md:flex items-center gap-2 bg-[#06C755] text-white px-6 py-2 rounded-full text-sm font-bold btn-hover transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                LINE友だち追加
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-4 md:pt-40 md:pb-20 px-4 text-center relative overflow-hidden" style="background-image: url('images/DSC1062.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-[#F5F1ED]/80"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-main-green">
+                今の家づくりで怖いのは、価格の高騰だけではなく、<span class="text-accent-orange">相談相手を間違えること</span>です。
+            </h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-600 font-medium leading-relaxed">
+                家づくりの失敗のほとんどは、知識不足ではなく<br>
+                <span class="font-bold text-main-green">相談相手の選び間違い</span>から起きています。<br>
+                コーディネーターは、あなたの側に立つ唯一の専門家です。
+            </p>
+            <a href="https://lin.ee/8MXc8uF"
+               class="inline-flex items-center gap-3 bg-[#06C755] text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg btn-hover transition-all mb-6 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                LINE登録で5大特典を無料で受け取る
+            </a>
+            <p class="text-sm text-gray-500 mt-3">LINE友だち追加で<span class="font-bold text-main-green">「家づくり5大特典」</span>を無料プレゼント</p>
+        </div>
+    </section>
+
+    <!-- 完成物件写真ギャラリー -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3 text-main-green">サポート実績</h2>
+                <div class="w-16 h-1 bg-accent-orange mx-auto mb-4"></div>
+                <p class="text-gray-600 leading-relaxed">これまでお手伝いしたお客様の家づくりの一部をご紹介します。<br class="hidden md:block">コーディネーターとして、理想の住まいの実現をサポートしてきました。</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_003.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_006.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_017.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_020.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_001.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_007.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_012.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+                <div class="aspect-square overflow-hidden rounded-lg"><img src="images/hb_021.jpg" alt="サポート実績" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- できること -->
+    <section class="py-20 px-4 bg-[#F5F1ED]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3 text-main-green">House Bridgeとは？</h2>
+                <div class="w-16 h-1 bg-accent-orange mx-auto mb-4"></div>
+            </div>
+            <div class="bg-white rounded-2xl px-8 py-8 shadow-sm mb-10">
+                <p class="text-lg font-bold text-main-green mb-4 text-center">住宅会社でも、営業会社でもありません。</p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    私たちは、特定の住宅会社を勧める立場ではありません。
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    「この提案は本当に合っている？」「その金額は適正？」「この間取りで後悔しない？」<br>
+                    そんな家づくりの<span class="font-bold text-main-green">"分からない"を整理</span>し、建てる人側の立場で公平に判断する<span class="font-bold text-accent-orange">第三者コーディネーター</span>です。
+                </p>
+                <p class="text-gray-600 leading-relaxed text-sm">各項目をタップすると詳しい内容をご覧いただけます。</p>
+            </div>
+            <div class="space-y-4">
+                <!-- 資金計画 -->
+                <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(0)">
+                    <div class="flex items-center gap-5">
+                        <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </span>
+                        <p class="text-lg md:text-xl font-bold text-main-green">資金計画をサポートできます</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+                <!-- 土地探し -->
+                <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(1)">
+                    <div class="flex items-center gap-5">
+                        <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </span>
+                        <p class="text-lg md:text-xl font-bold text-main-green">土地探しをサポートできます</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+                <!-- 建築家・設計 -->
+                <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(2)">
+                    <div class="flex items-center gap-5">
+                        <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                        </span>
+                        <p class="text-lg md:text-xl font-bold text-main-green">建築家探し・設計のアドバイスができます</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+                <!-- 工務店選び -->
+                <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(3)">
+                    <div class="flex items-center gap-5">
+                        <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </span>
+                        <p class="text-lg md:text-xl font-bold text-main-green">工務店の選び方をサポートできます</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+                <!-- メンテナンス -->
+                <div class="modal-card bg-white rounded-2xl px-8 py-6 shadow-sm flex items-center justify-between gap-5" onclick="openModal(4)">
+                    <div class="flex items-center gap-5">
+                        <span class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </span>
+                        <p class="text-lg md:text-xl font-bold text-main-green">アフターメンテナンスのアドバイスができます</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 担当コーディネーター紹介 -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-2xl mx-auto text-center">
+            <p class="text-sm font-bold tracking-widest text-accent-orange uppercase mb-6">Your Coordinator</p>
+            <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden mx-auto border-4 border-[#F5F1ED] shadow-xl mb-6">
+                <img src="images/taniprof.jpg" alt="ハウス・ブリッジ 谷"
+                     class="w-full h-full object-cover"
+                     onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300';">
+            </div>
+            <p class="text-main-green font-bold text-xl mb-1">谷 小枝（家づくりコーディネーター）</p>
+            <div class="w-16 h-0.5 bg-accent-orange mx-auto my-5"></div>
+            <p class="text-gray-700 italic leading-relaxed text-lg mb-8 px-4">
+                「私は特定の建築会社を勧めることはありません。<br class="hidden md:block">
+                あなたの家族にとって、何が最善かを一緒に考え抜くこと。<br class="hidden md:block">
+                それが私の仕事です。」
+            </p>
+            <button onclick="openProfileModal()"
+                    class="inline-flex items-center text-main-green hover:opacity-70 transition-all border-b-2 border-main-green pb-1 font-bold">
+                想いを詳しく読む
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 mb-20 text-center">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+            <div class="bg-main-green text-white p-12 md:p-16">
+                <p class="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+                    LINE登録で無料プレゼント
+                </p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 tracking-tight">家づくり、何から始めればいい？<br>まずはLINEで相談。</h2>
+                <p class="mb-4 text-lg leading-relaxed text-white/90">
+                    LINE友だち追加で<br class="md:hidden">
+                    <span class="font-bold text-white text-xl md:text-2xl">「家づくり5大特典」</span><br>
+                    を無料でお届けします。
+                </p>
+                <ul class="text-left max-w-md mx-auto mb-8 space-y-2 text-white/85">
+                    <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 住宅予算チェックシート</li>
+                    <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 間取り判断リスト</li>
+                    <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 総予算計画テンプレート</li>
+                    <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 住宅会社比較シート</li>
+                    <li class="flex items-start gap-2"><span class="text-[#06C755] mt-0.5">✓</span> 家づくりの進め方ガイド</li>
+                </ul>
+                <a href="https://lin.ee/8MXc8uF"
+                    class="inline-flex items-center gap-3 bg-[#06C755] text-white text-xl md:text-2xl font-bold py-5 px-12 rounded-xl shadow-lg btn-hover transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                    LINEで5大特典を受け取る
+                </a>
+                <p class="mt-8 text-sm text-white/60 italic">※LINEアプリが開きます｜無理な勧誘は一切ありません</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-main-green text-white/60 py-16 text-center px-4">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-white/80 text-sm mb-6 tracking-widest font-medium uppercase">建築家ネットワーク・ナビ 大阪ナビ</p>
+            <a href="https://house-bridge.jp/" class="inline-block hover:opacity-80 transition-all mb-6" title="ハウス・ブリッジ公式サイトへ">
+                <img src="images/hb_logo.svg" alt="HOUSE BRIDGE" class="h-10 md:h-12 w-auto brightness-0 invert mx-auto">
+            </a>
+            <p class="text-sm mb-6 italic font-light">「情報の波に疲れた人を救う、温かな港」</p>
+            <a href="https://house-bridge.jp/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 border border-white/40 text-white/90 text-sm font-bold px-6 py-3 rounded-full hover:bg-white/10 transition-all mb-10">
+                公式サイトはこちら
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+            </a>
+            <div class="flex justify-center text-sm mb-10 text-white/90">
+                <span class="font-bold border-b border-white/20 pb-1">株式会社ハウス・ブリッジ</span>
+            </div>
+            <p class="text-xs tracking-tighter">&copy; 2026 House Bridge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Profile Modal -->
+    <div id="profileModalOverlay" class="modal-overlay" onclick="closeProfileModalOutside(event)">
+        <div class="modal-box" style="max-width:560px;">
+            <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 font-bold text-sm transition-colors" onclick="closeProfileModal()">✕</button>
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 shadow">
+                    <img src="images/taniprof.jpg" alt="谷" class="w-full h-full object-cover">
+                </div>
+                <div class="text-left">
+                    <p class="font-bold text-main-green text-base">谷</p>
+                    <p class="text-xs text-gray-400">家づくりコーディネーター</p>
+                </div>
+            </div>
+            <div class="w-12 h-0.5 bg-accent-orange mb-5"></div>
+            <p class="text-gray-600 leading-loose text-sm md:text-base">
+                家づくりは人生で一番大きな買い物と言われますが、実はその「買い方」を教えてくれる場所は驚くほど少ないのが現状です。私は、特定の建築会社やハウスメーカーの営業マンではありません。そのため、お客様に対して特定の会社を強引に勧める必要も、不都合な真実を隠す必要もありません。<br><br>
+                私の役割は、住宅業界の「プロ側の理論」ではなく、お客様の「暮らしの幸福」を最優先に考え、中立な立場からアドバイスをすることです。予算の立て方から、自分たちに本当に合う建築先の見極め方まで。あなたの家族にとって何が最善かを一緒に考え抜き、理想の家づくりというゴールまで二人三脚で伴走すること。それが、ハウス・ブリッジとしての私の仕事です。
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModalOutside(event)">
+        <div class="modal-box" id="modalBox">
+            <button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 font-bold text-sm transition-colors" onclick="closeAllModals()">✕</button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-main-green flex items-center justify-center flex-shrink-0">
+                    <svg id="modalIconSvg" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"></svg>
+                </div>
+                <h3 id="modalTitle" class="text-xl font-bold text-main-green"></h3>
+            </div>
+            <div class="w-12 h-0.5 bg-accent-orange mb-5"></div>
+            <p id="modalText" class="text-gray-600 leading-relaxed text-sm md:text-base"></p>
+        </div>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-50 md:hidden">
+        <a href="https://lin.ee/8MXc8uF"
+           class="flex flex-col items-center justify-center w-20 h-20 bg-[#06C755] text-white rounded-full shadow-2xl transition-all btn-hover border-2 border-white/20 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mb-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+            <span class="text-[10px] font-bold leading-tight">LINE<br>友だち追加</span>
+        </a>
+    </div>
+
+    <script>
+        // ── モーダルデータ ──────────────────────────────────
+        const modalData = [
+            {
+                title: '資金計画サポート',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
+                text: '住宅ローンで大切なのは「借りられる額」ではなく「無理なく返せる額」です。教育費・老後資金も含めたライフプランを一緒に整理し、家づくりの土台となる本当の予算を明確にします。金融機関の選び方や返済シミュレーションなど、お金の不安を解消するところからサポートします。'
+            },
+            {
+                title: '土地探しサポート',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>',
+                text: '土地は単体で判断せず、建物とのバランスや予算配分・将来の暮らし方を合わせて考えることが重要です。条件が悪く見える土地でも、プランニング次第で理想の家は実現できます。良い土地との出会いを逃さないための準備から、購入判断までをサポートします。'
+            },
+            {
+                title: '建築家探し・設計アドバイス',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>',
+                text: '建築家との家づくりは高嶺の花ではありません。大切なのはデザインだけでなく、人柄・相性・コミュニケーションスタイルです。あなた家族の価値観と暮らし方を丁寧にヒアリングした上で、最適な建築家とのマッチングと設計打合せをスムーズに進めるアドバイスをします。'
+            },
+            {
+                title: '工務店選びサポート',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>',
+                text: '工務店選びは見積金額だけで判断するのは危険です。施工実績・現場管理体制・アフターサービスの充実度など、複数の視点で総合判断する必要があります。中立な立場で複数の工務店を比較検討し、あなたの予算と要望に本当に合ったパートナー選びをサポートします。'
+            },
+            {
+                title: 'アフターメンテナンスアドバイス',
+                iconHtml: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>',
+                text: '家は完成してからが本当のスタートです。外壁・屋根・設備機器は適切な時期にメンテナンスを行うことで住宅の資産価値を守り、将来の大規模修繕費用を抑えられます。完成後も安心して暮らし続けるための維持管理計画について、わかりやすくアドバイスします。'
+            }
+        ];
+
+        // ── モーダル開閉 ────────────────────────────────────
+        function openModal(index) {
+            const data = modalData[index];
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalText').textContent  = data.text;
+            document.getElementById('modalIconSvg').innerHTML = data.iconHtml;
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAllModals() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOutside(event) {
+            if (event.target === document.getElementById('modalOverlay')) {
+                closeAllModals();
+            }
+        }
+
+        // ── プロフィールモーダル ────────────────────────────
+        function openProfileModal() {
+            document.getElementById('profileModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProfileModal() {
+            document.getElementById('profileModalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeProfileModalOutside(event) {
+            if (event.target === document.getElementById('profileModalOverlay')) {
+                closeProfileModal();
+            }
+        }
+
+        // Escキーでどのモーダルも閉じられるように
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAllModals();
+                closeProfileModal();
+            }
+        });
+    </script>
+</body>
+</html>
