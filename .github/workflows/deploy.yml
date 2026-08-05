@@ -18,7 +18,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # ここを www/lp/2/ に指定
-          server-dir: www/lp/2/
+          # house-bridge.jp のWeb公開フォルダは ~/www/house-bridge/mainsite/
+          # そのため転送先は www/house-bridge/mainsite/lp/2/ になる
+          server-dir: www/house-bridge/mainsite/lp/2/
           # 転送管理用（550エラー対策）
           state-name: .git-ftp-state-lp-2

@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>ハウス・ブリッジ | 家づくり迷子をサポートします</title>
+<title>家づくり資料 無料プレゼント｜ハウス・ブリッジ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="ハウス・ブリッジ | 家づくり迷子をサポートします" />
-<meta property="og:description" content="家づくりの“分からない”を、一緒に整理。資金・土地・会社選びまで、あなたに最適な家づくりをサポート。LINE登録で家づくり5大特典を無料プレゼント。" />
-<meta property="og:image" content="images/DSC1062.jpg" />
+<meta property="og:title" content="家づくりで後悔しないために、最初に「予算」と「進め方」を整理しませんか？｜ハウス・ブリッジ" />
+<meta property="og:description" content="住宅会社へ相談する前に確認しておきたいことを、中立な家づくりの専門家がまとめました。LINE登録で「家づくりスターターセット」5点を無料でお届けします。営業電話はありません。" />
+<meta property="og:image" content="images/gift/gift01.png" />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,79 @@
   a{text-decoration:none;color:inherit;}
   ::selection{background:#E59545;color:#fff;}
   @keyframes hbCue{0%{transform:translateY(0);opacity:.85;}50%{transform:translateY(10px);opacity:.3;}100%{transform:translateY(0);opacity:.85;}}
+
+  /* ══════════════════════════════════════════════════════════
+     LINE登録ボタン
+     文言「家づくり資料を無料で受け取る」＝全角14文字を必ず1行に収める。
+     文字・アイコン・余白をすべて em で連動させ、必要幅を文字サイズの倍数で固定する。
+
+       文字 14em ＋ アイコン 1.4em ＋ 間隔 0.5em ＋ 左右padding 2em ＝ 17.9em
+
+     よって 文字サイズ ＝ ボタン枠の幅 ÷ 18.4（0.5em分の保険込み）で必ず収まる。
+     メディアクエリでの切り替えをしていないため、画面幅・設置場所によらず折り返さない。
+     ══════════════════════════════════════════════════════════ */
+  .hb-cta-wrap{container-type:inline-size;max-width:560px;margin-inline:auto;}
+  .hb-cta{
+    font-size:min(calc(100cqi / 18.4),22px);
+    white-space:nowrap;display:flex;align-items:center;justify-content:center;
+    gap:.5em;padding:1.1em 1em;width:100%;
+    background:#06C755;color:#fff;font-weight:700;letter-spacing:.03em;line-height:1.4;
+    border-radius:999px;box-shadow:0 14px 36px rgba(6,199,85,.42);
+    transition:transform .25s,box-shadow .25s;
+  }
+  .hb-cta:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(6,199,85,.52);}
+  .hb-cta svg{width:1.4em;height:1.4em;flex:0 0 auto;}
+  /* ヘッダー・追従ボタンは内容幅のピル形。枠幅に依存しないので固定サイズ */
+  .hb-cta-pill{
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+    background:#06C755;color:#fff;font-weight:700;letter-spacing:.03em;
+    border-radius:999px;transition:transform .25s,box-shadow .25s;
+  }
+  .hb-cta-pill:hover{transform:translateY(-2px);}
+
+  /* ══════════════════════════════════════════════════════════
+     ファーストビュー見出し
+     各行を1行に収めるため、最長行の文字数から文字サイズを逆算する。
+     スマホ（〜767px）3行組：最長行「最初に「予算」と「進め方」を」＝全角14文字
+     PC（768px〜）2行組：最長行「最初に「予算」と「進め方」を整理しませんか？」＝全角22文字
+     基準は 100cqi（親コンテナの内寸）。100vw はスクロールバー幅を含むため使わない。
+     ══════════════════════════════════════════════════════════ */
+  .fv-h1-wrap{container-type:inline-size;}
+  .fv-h1{
+    margin:0 0 clamp(20px,2.8vw,30px);
+    font-family:'Shippori Mincho',serif;font-weight:600;color:#fff;letter-spacing:.03em;
+    text-shadow:0 2px 30px rgba(0,16,40,.45);
+    font-size:min(calc((100vw - 3rem) / 14.15),30px);
+    font-size:min(calc(100cqi / 14.15),30px);
+    line-height:1.62;
+  }
+  .fv-h1 > span{display:block;white-space:nowrap;}
+  @media (min-width:768px){
+    .fv-h1{
+      font-size:min(calc((100vw - 3rem) / 22.15),52px);
+      font-size:min(calc(100cqi / 22.15),52px);
+    }
+    .fv-h1 br.sp-only{display:none;}
+  }
+
+  /* 特典カード */
+  .gift-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+  .gift-card{width:calc(33.333% - 6px);transition:transform .3s;}
+  .gift-card img{border:1px solid #DBE2EB;border-radius:3px;box-shadow:0 10px 24px rgba(19,72,135,.16);width:100%;height:auto;}
+  .gift-card p{display:none;}
+  .gift-list{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;text-align:left;}
+  .gift-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;line-height:1.6;color:#4A4A4A;}
+  @media (min-width:768px){
+    .gift-grid{gap:14px;}
+    .gift-card{width:calc(20% - 12px);}
+    .gift-card:hover{transform:translateY(-5px);}
+    .gift-card p{display:block;margin:10px 0 0;font-size:12.5px;font-weight:700;line-height:1.5;color:#134887;letter-spacing:.02em;}
+    .gift-list{display:none;}
+  }
+
+  /* 安心表示（チェックリスト） */
+  .safe-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;text-align:left;width:fit-content;margin-inline:auto;}
+  .safe-list li{display:flex;align-items:flex-start;gap:10px;font-size:clamp(13px,1.6vw,15px);line-height:1.7;}
 </style>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-57FSGW9P');</script>
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","vchwwr9akr");</script>
@@ -31,68 +104,150 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57FSGW9P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ============ HEADER ============ -->
-<header id="siteHeader" style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:clamp(26px,3.4vw,42px) clamp(30px,4.6vw,48px);background:transparent;transition:background .4s,box-shadow .4s,backdrop-filter .4s;">
-  <a href="#hero" style="display:flex;align-items:center;"><img id="headerLogo" src="images/hb_logo.svg" alt="ハウス・ブリッジ" style="height:clamp(32px,4vw,40px);width:auto;filter:brightness(0) invert(1);transition:filter .4s;" /></a>
-  <a href="#cta" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;font-weight:700;font-size:clamp(12px,1.5vw,14px);letter-spacing:.04em;padding:11px 20px;border-radius:999px;box-shadow:0 6px 18px rgba(6,199,85,.32);transition:transform .25s,box-shadow .25s;" data-style-hover="transform:translateY(-2px);box-shadow:0 10px 24px rgba(6,199,85,.42);">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
-    <span>LINE登録</span>
+<header id="siteHeader" style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:clamp(26px,3.4vw,42px) clamp(16px,4.6vw,48px);background:transparent;transition:background .4s,box-shadow .4s,backdrop-filter .4s;">
+  <a href="#hero" style="display:flex;align-items:center;flex:none;"><img id="headerLogo" src="images/hb_logo.svg" alt="ハウス・ブリッジ" style="height:clamp(28px,4vw,40px);width:auto;filter:brightness(0) invert(1);transition:filter .4s;" /></a>
+  <a href="https://lin.ee/8MXc8uF" class="hb-cta-pill" style="font-size:clamp(12px,1.5vw,14px);padding:11px 18px;box-shadow:0 6px 18px rgba(6,199,85,.32);">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" style="flex:none;"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+    <span>家づくり資料を無料で受け取る</span>
   </a>
 </header>
 
-<!-- ============ ① HERO ============ -->
-<section id="hero" style="position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:#0b2342;">
+<!-- ============ ① ファーストビュー（LINE登録で完結するブロック） ============ -->
+<section id="hero" style="position:relative;overflow:hidden;background:#0b2342;padding:clamp(122px,19vh,196px) clamp(16px,5vw,58px) clamp(56px,8vw,92px);">
   <div id="heroBg" style="position:absolute;inset:-5%;background-image:url('images/DSC1062.jpg');background-size:cover;background-position:center 40%;will-change:transform;"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,52,.52) 0%,rgba(8,24,52,.14) 26%,rgba(8,22,48,.40) 54%,rgba(6,18,40,.74) 78%,rgba(5,15,34,.9) 100%);"></div>
-  <div style="position:absolute;inset:clamp(14px,2.2vw,26px);border:1px solid rgba(255,255,255,.28);border-radius:3px;pointer-events:none;z-index:3;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,52,.72) 0%,rgba(8,22,48,.62) 38%,rgba(6,18,40,.78) 72%,rgba(5,15,34,.92) 100%);"></div>
+  <div style="position:absolute;inset:clamp(10px,2.2vw,26px);border:1px solid rgba(255,255,255,.24);border-radius:3px;pointer-events:none;z-index:3;"></div>
 
-  <div style="position:absolute;top:clamp(78px,12vh,120px);right:clamp(30px,5vw,58px);z-index:4;display:none;"></div>
+  <div style="position:relative;z-index:4;width:100%;max-width:1000px;margin:0 auto;text-align:center;">
 
-  <div style="position:relative;z-index:4;width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(28px,5vw,58px) clamp(92px,15vh,150px);">
-    <h1 data-reveal="120" style="margin:0 0 clamp(22px,3vw,32px);font-family:'Shippori Mincho',serif;font-weight:600;color:#fff;font-size:clamp(22px,5.7vw,60px);line-height:1.62;letter-spacing:.03em;text-shadow:0 2px 30px rgba(0,16,40,.4);"><span class="nb" style="white-space:nowrap;">家づくりの“分からない”を、</span><span class="nb" style="white-space:nowrap;color:#F0A85A;text-shadow:0 2px 16px rgba(0,0,0,.6),0 0 3px rgba(0,0,0,.55);">一緒に整理しませんか。</span></h1>
-    <p data-reveal="220" style="margin:0 0 clamp(30px,4vw,42px);color:rgba(255,255,255,.92);font-size:clamp(14px,1.9vw,18px);line-height:2.05;max-width:46em;text-shadow:0 1px 18px rgba(0,16,40,.5);"><span style="display:block;">資金のこと、土地のこと、工務店選び。</span><span style="display:block;">家づくりの“分からない”を、一つずつ一緒に整理していきます。</span><span style="display:block;"><strong style="font-weight:700;color:#fff;">まずは気軽に、無料でご相談ください。</strong></span></p>
-    <div data-reveal="320" style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(14px,2vw,24px);">
-      <a href="#cta" style="display:inline-flex;align-items:center;gap:12px;background:#06C755;color:#fff;font-weight:700;font-size:clamp(15px,1.9vw,18px);letter-spacing:.03em;padding:18px 32px;border-radius:999px;box-shadow:0 14px 36px rgba(6,199,85,.42);transition:transform .25s,box-shadow .25s;" data-style-hover="transform:translateY(-3px);box-shadow:0 18px 42px rgba(6,199,85,.52);">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
-        <span>LINE登録で5大特典を受け取る</span>
+    <div data-reveal="0" style="display:inline-flex;align-items:center;gap:10px;margin-bottom:clamp(18px,2.4vw,26px);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);padding:8px 18px;border-radius:999px;">
+      <span style="width:18px;height:1px;background:#F0A85A;"></span>
+      <span style="color:#fff;font-size:clamp(12px,1.5vw,14px);font-weight:600;letter-spacing:.08em;white-space:nowrap;">住宅会社へ相談する前の方へ</span>
+      <span style="width:18px;height:1px;background:#F0A85A;"></span>
+    </div>
+
+    <div class="fv-h1-wrap" data-reveal="80">
+      <h1 class="fv-h1">
+        <span>家づくりで後悔しないために</span>
+        <span>最初に<span style="color:#F0A85A;">「予算」</span>と<span style="color:#F0A85A;">「進め方」</span>を<br class="sp-only">整理しませんか？</span>
+      </h1>
+    </div>
+
+    <p data-reveal="160" style="margin:0 auto clamp(30px,4vw,44px);max-width:44em;color:rgba(255,255,255,.92);font-size:clamp(13.5px,1.7vw,17px);line-height:2.0;text-shadow:0 1px 18px rgba(0,16,40,.5);">
+      <span style="display:block;">土地・建物・諸費用を含めた総予算や、住宅会社を選ぶ前に確認しておきたいことを、</span>
+      <span style="display:block;">中立な家づくりの専門家が分かりやすくまとめました。</span>
+    </p>
+
+    <!-- 家づくりスターターセット -->
+    <div data-reveal="240" style="background:#fff;border-radius:6px;padding:clamp(22px,3.2vw,40px) clamp(14px,2.6vw,38px);box-shadow:0 30px 70px rgba(0,12,32,.34);margin-bottom:clamp(28px,3.6vw,40px);">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;">
+        <span style="width:22px;height:1px;background:#E59545;"></span>
+        <span style="font-size:clamp(11px,1.4vw,13px);font-weight:700;letter-spacing:.14em;color:#E59545;white-space:nowrap;">LINE登録で受け取れる</span>
+        <span style="width:22px;height:1px;background:#E59545;"></span>
+      </div>
+      <h2 style="margin:0 0 8px;font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(21px,3.4vw,38px);line-height:1.45;color:#134887;letter-spacing:.04em;">家づくりスターターセット</h2>
+      <p style="margin:0 0 clamp(20px,2.6vw,30px);font-size:clamp(12px,1.5vw,14px);color:#7a8798;letter-spacing:.02em;">一級建築士監修の資料 5点セット ／ すべて無料</p>
+
+      <div class="gift-grid">
+        <div class="gift-card">
+          <img src="images/gift/gift01.png" alt="特典01 住宅予算セルフチェックシート" />
+          <p>住宅予算<br>セルフチェックシート</p>
+        </div>
+        <div class="gift-card">
+          <img src="images/gift/gift02.png" alt="特典02 間取り判断チェックリスト" />
+          <p>間取り判断<br>チェックリスト</p>
+        </div>
+        <div class="gift-card">
+          <img src="images/gift/gift03.png" alt="特典03 家づくりの判断基準 要約カード" />
+          <p>家づくりの判断基準<br>要約カード</p>
+        </div>
+        <div class="gift-card">
+          <img src="images/gift/gift04.png" alt="特典04 家づくり生活チェックシート" />
+          <p>家づくり<br>生活チェックシート</p>
+        </div>
+        <div class="gift-card">
+          <img src="images/gift/gift05.png" alt="特典05 総予算計画書テンプレート" />
+          <p>総予算計画書<br>テンプレート</p>
+        </div>
+      </div>
+
+      <!-- スマホ用：表紙の文字が小さいため資料名をテキストで補足 -->
+      <ul class="gift-list">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>住宅予算セルフチェックシート<span style="color:#98a4b4;">（Excel）</span></span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>間取り判断チェックリスト<span style="color:#98a4b4;">（PDF）</span></span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>家づくりの判断基準 要約カード<span style="color:#98a4b4;">（PDF）</span></span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>家づくり生活チェックシート<span style="color:#98a4b4;">（Excel）</span></span></li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>総予算計画書テンプレート<span style="color:#98a4b4;">（Excel）</span></span></li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="hb-cta-wrap" data-reveal="320">
+      <a href="https://lin.ee/8MXc8uF" class="hb-cta">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+        家づくり資料を無料で受け取る
       </a>
-      <span style="color:rgba(255,255,255,.82);font-size:clamp(12px,1.5vw,13px);letter-spacing:.04em;line-height:1.7;">友だち追加で『家づくり5大特典』を無料プレゼント</span>
     </div>
-  </div>
 
-  <div style="position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:4;display:none;"></div>
-</section>
-
-<!-- ============ ② 共感 ============ -->
-<section style="background:#FAF7F3;padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
-  <div style="max-width:1080px;margin:0 auto;">
-    <div data-reveal="0" style="margin-bottom:clamp(40px,5vw,64px);">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">YOUR WORRIES</span></div>
-      <h2 style="margin:0;font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(27px,4.6vw,48px);line-height:1.55;color:#134887;letter-spacing:.03em;">こんな迷い、ありませんか。</h2>
-    </div>
-    <div style="border-top:1px solid rgba(19,72,135,.18);">
-      <div data-reveal="0" style="display:flex;align-items:baseline;gap:clamp(18px,4vw,52px);padding:clamp(26px,3.6vw,42px) 0;border-bottom:1px solid rgba(19,72,135,.18);">
-        <span style="font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(34px,5.5vw,64px);line-height:1;color:#E59545;flex:none;">01</span>
-        <p style="margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(18px,2.7vw,30px);line-height:1.65;color:#1f3a5c;letter-spacing:.02em;">住宅会社の提案、本当に自分に合ってる？</p>
-      </div>
-      <div data-reveal="80" style="display:flex;align-items:baseline;gap:clamp(18px,4vw,52px);padding:clamp(26px,3.6vw,42px) 0;border-bottom:1px solid rgba(19,72,135,.18);">
-        <span style="font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(34px,5.5vw,64px);line-height:1;color:#E59545;flex:none;">02</span>
-        <p style="margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(18px,2.7vw,30px);line-height:1.65;color:#1f3a5c;letter-spacing:.02em;">この予算で建てて、後悔しない？</p>
-      </div>
-      <div data-reveal="160" style="display:flex;align-items:baseline;gap:clamp(18px,4vw,52px);padding:clamp(26px,3.6vw,42px) 0;border-bottom:1px solid rgba(19,72,135,.18);">
-        <span style="font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(34px,5.5vw,64px);line-height:1;color:#E59545;flex:none;">03</span>
-        <p style="margin:0;font-family:'Shippori Mincho',serif;font-weight:500;font-size:clamp(18px,2.7vw,30px);line-height:1.65;color:#1f3a5c;letter-spacing:.02em;">そもそも、何から始めればいいの？</p>
-      </div>
-    </div>
+    <!-- ボタン付近の安心表示 -->
+    <ul class="safe-list" data-reveal="380" style="margin-top:clamp(20px,2.6vw,28px);color:rgba(255,255,255,.88);">
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.16)"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#7BE8A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>LINE登録後すぐにご覧いただけます</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.16)"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#7BE8A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>営業電話はありません</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.16)"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#7BE8A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>住宅会社への個人情報提供はありません</span></li>
+      <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.16)"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#7BE8A6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>資料を読むだけでも問題ありません</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- ============ ③ とは ============ -->
-<section style="background:#fff;padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
-  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,5.5vw,80px);align-items:center;">
+<!-- ============ ② 家づくりの悩み（具体化） ============ -->
+<section style="background:#FAF7F3;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
+  <div style="max-width:1000px;margin:0 auto;">
+    <div data-reveal="0" style="text-align:center;margin-bottom:clamp(36px,4.6vw,58px);">
+      <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">YOUR WORRIES</span><span style="width:28px;height:1px;background:#E59545;"></span></div>
+      <h2 style="margin:0;font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(21px,4.2vw,44px);line-height:1.55;color:#134887;letter-spacing:.03em;"><span class="nb">こんな状態のまま</span><span class="nb">住宅会社へ相談していませんか？</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(10px,1.4vw,14px);">
+      <div data-reveal="0" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">自分たちの適正予算が分からない</p>
+      </div>
+      <div data-reveal="40" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">住宅ローンをいくら借りてよいか不安</p>
+      </div>
+      <div data-reveal="80" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">土地と建物の予算配分が分からない</p>
+      </div>
+      <div data-reveal="120" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">どの住宅会社が合っているか判断できない</p>
+      </div>
+      <div data-reveal="160" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">見積りが高いのか安いのか分からない</p>
+      </div>
+      <div data-reveal="200" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">営業担当者の説明をそのまま信じてよいか迷う</p>
+      </div>
+      <div data-reveal="240" style="display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:4px;padding:18px 20px;">
+        <span style="flex:none;width:18px;height:18px;border:1.5px solid #E59545;border-radius:2px;margin-top:4px;"></span>
+        <p style="margin:0;font-size:clamp(14px,1.6vw,16px);line-height:1.75;color:#1f3a5c;">情報を集めすぎて何が正しいか分からない</p>
+      </div>
+    </div>
+    <p data-reveal="280" style="margin:clamp(30px,3.6vw,42px) 0 0;text-align:center;font-family:'Shippori Mincho',serif;font-size:clamp(16px,2.2vw,24px);font-weight:500;line-height:1.85;color:#134887;letter-spacing:.03em;"><span class="nb">ひとつでも当てはまるなら、</span><span class="nb">住宅会社へ行く前に整理しておきませんか。</span></p>
+  </div>
+</section>
+
+<!-- ============ ③ 中立的な立場の明記 ============ -->
+<section style="background:#fff;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
+  <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(38px,5.5vw,80px);align-items:center;">
     <div data-reveal="0">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">ABOUT HOUSE BRIDGE</span></div>
-      <h2 style="margin:0 0 clamp(24px,3vw,34px);font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(25px,3.7vw,42px);line-height:1.6;color:#134887;letter-spacing:.03em;"><span class="nb">家づくりの“分からない”を、</span><span class="nb">一緒に整理する窓口です。</span></h2>
-      <p style="margin:0 0 28px;font-size:clamp(15px,1.7vw,17px);line-height:2.05;color:#4A4A4A;"><span style="display:block;">資金のこと、土地のこと、会社選び。</span><span style="display:block;">家づくりの進め方を一つずつ一緒に整理し、</span><span style="display:block;"><strong style="color:#134887;font-weight:700;">あなたに最適な会社をご紹介します。</strong></span></p>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">OUR POSITION</span></div>
+      <h2 style="margin:0 0 clamp(22px,3vw,32px);font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(23px,3.7vw,42px);line-height:1.6;color:#134887;letter-spacing:.03em;"><span class="nb">私たちは、</span><span class="nb">家を売る会社ではありません。</span></h2>
+      <p style="margin:0 0 24px;font-size:clamp(14.5px,1.7vw,17px);line-height:2.05;color:#4A4A4A;">ハウス・ブリッジは、ハウスメーカー・工務店・不動産会社のいずれにも属さず、<strong style="color:#134887;font-weight:700;">施主側の立場で家づくりを整理する会社</strong>です。</p>
+      <p style="margin:0 0 28px;font-size:clamp(14.5px,1.7vw,17px);line-height:2.05;color:#4A4A4A;">資金計画、土地探し、住宅ローン、住宅会社選びから、設計・施工まで、家づくり全体を中立な立場でサポートしています。</p>
       <div style="display:flex;align-items:center;gap:14px;"><span style="width:44px;height:2px;background:#E59545;"></span><span style="font-family:'Shippori Mincho',serif;font-size:clamp(15px,1.8vw,18px);font-weight:500;color:#134887;letter-spacing:.04em;">家づくりを、ひとりで悩まないために。</span></div>
     </div>
     <div data-reveal="140" style="position:relative;">
@@ -102,8 +257,59 @@
   </div>
 </section>
 
-<!-- ============ ④ 比較 ============ -->
-<section style="background:linear-gradient(180deg,#0f3d72 0%,#0c2f59 100%);padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
+<!-- ============ ④ 代表からのメッセージ ============ -->
+<section style="background:#F5F1ED;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
+  <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(38px,5.5vw,72px);align-items:center;">
+    <div data-reveal="0" style="position:relative;max-width:340px;width:100%;margin:0 auto;">
+      <div style="position:absolute;inset:-16px 16px 16px -16px;border:1px solid #E59545;border-radius:4px;"></div>
+      <div style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 28px 56px rgba(19,72,135,.18);"><img src="images/taniprof.jpg" alt="ハウス・ブリッジ代表 谷 小枝" style="width:100%;height:100%;object-fit:cover;" /></div>
+    </div>
+    <div data-reveal="140">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">MESSAGE</span></div>
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px;"><span style="font-family:'Shippori Mincho',serif;font-size:clamp(26px,3.6vw,40px);font-weight:600;color:#134887;letter-spacing:.08em;">谷 小枝</span><span style="font-size:13px;color:#4A4A4A;font-weight:500;letter-spacing:.04em;">ハウス・ブリッジ代表／家づくりコーディネーター</span></div>
+      <p style="margin:0 0 18px;font-size:clamp(14.5px,1.7vw,17px);line-height:2.05;color:#4A4A4A;">はじめまして。ハウス・ブリッジ代表の谷です。</p>
+      <p style="margin:0 0 18px;font-size:clamp(14.5px,1.7vw,17px);line-height:2.05;color:#4A4A4A;">家づくりでは、住宅会社へ相談する前に、無理のない予算や希望の優先順位を整理しておくことが大切です。</p>
+      <p style="margin:0 0 24px;font-size:clamp(14.5px,1.7vw,17px);line-height:2.05;color:#4A4A4A;">LINEでは、住宅会社を決める前に知っておいていただきたい内容を、分かりやすい資料としてお届けしています。</p>
+      <div style="position:relative;padding-left:clamp(26px,3vw,40px);"><span style="position:absolute;left:0;top:-14px;font-family:'Shippori Mincho',serif;font-size:clamp(44px,7vw,72px);line-height:1;color:rgba(229,149,69,.5);">“</span><p style="margin:0;font-family:'Shippori Mincho',serif;font-size:clamp(16px,2.1vw,23px);line-height:1.95;color:#1f3a5c;font-weight:500;letter-spacing:.02em;">まずは資料を読むだけでも大丈夫です。<span style="display:block;">ご自身の家づくりを整理するためにご活用ください。</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ⑤ 安心してご登録ください ＋ CTA ============ -->
+<section style="background:#FAF7F3;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
+  <div style="max-width:860px;margin:0 auto;">
+    <div data-reveal="0" style="background:#fff;border:1px solid rgba(19,72,135,.10);border-radius:8px;padding:clamp(30px,4.4vw,56px) clamp(16px,3.4vw,48px);text-align:center;">
+      <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:18px;"><span style="width:24px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.24em;font-weight:600;color:#E59545;">NO PRESSURE</span><span style="width:24px;height:1px;background:#E59545;"></span></div>
+      <h2 style="margin:0 0 clamp(28px,3.4vw,40px);font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(22px,3.6vw,40px);line-height:1.5;color:#134887;letter-spacing:.03em;">安心してご登録ください</h2>
+
+      <ul class="safe-list" style="margin-bottom:clamp(30px,3.6vw,44px);color:#1f3a5c;">
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>LINE登録だけで相談を申し込む必要はありません</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>住宅会社から営業連絡が入ることはありません</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>ご自身のタイミングで登録解除できます</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>資料を読むだけでも問題ありません</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:3px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>個別相談をご希望の場合のみLINEからご連絡いただけます</span></li>
+      </ul>
+
+      <div class="hb-cta-wrap">
+        <a href="https://lin.ee/8MXc8uF" class="hb-cta">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+          家づくり資料を無料で受け取る
+        </a>
+      </div>
+      <p style="margin:16px 0 0;font-size:12.5px;color:#98a4b4;letter-spacing:.03em;line-height:1.7;">※LINEアプリが開きます｜無理な勧誘は一切ありません</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ここから下：ハウス・ブリッジについての詳細 ============ -->
+<div style="background:#fff;padding:clamp(44px,6vw,72px) 20px;text-align:center;">
+  <p style="margin:0 0 6px;font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">MORE ABOUT US</p>
+  <p style="margin:0 0 14px;font-family:'Shippori Mincho',serif;font-size:clamp(16px,2.2vw,22px);font-weight:600;color:#134887;letter-spacing:.04em;">ハウス・ブリッジについて、もう少し詳しく</p>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin:0 auto;"><path d="M6 9l6 6 6-6" stroke="#E59545" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+
+<!-- ============ ⑥ 比較 ============ -->
+<section style="background:linear-gradient(180deg,#0f3d72 0%,#0c2f59 100%);padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
   <div style="max-width:980px;margin:0 auto;">
     <div data-reveal="0" style="text-align:center;margin-bottom:clamp(40px,5vw,60px);">
       <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">WITH HOUSE BRIDGE</span><span style="width:28px;height:1px;background:#E59545;"></span></div>
@@ -113,7 +319,7 @@
       <div style="text-align:center;color:rgba(255,255,255,.62);font-size:clamp(12px,1.5vw,14px);font-weight:500;letter-spacing:.04em;padding:6px;">これまでの家づくり</div>
       <div style="text-align:center;color:#0c2f59;font-size:clamp(12px,1.5vw,14px);font-weight:700;letter-spacing:.04em;padding:9px;border-radius:999px;background:#E59545;">ハウス・ブリッジと一緒なら</div>
     </div>
-    
+
       <div data-reveal="0" style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:9px;"><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span><span style="color:#fff;font-size:clamp(12px,1.4vw,14px);font-weight:700;letter-spacing:.08em;">進め方</span><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.4vw,16px);">
@@ -127,7 +333,7 @@
           </div>
         </div>
       </div>
-    
+
       <div data-reveal="0" style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:9px;"><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span><span style="color:#fff;font-size:clamp(12px,1.4vw,14px);font-weight:700;letter-spacing:.08em;">会社選び</span><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.4vw,16px);">
@@ -141,7 +347,7 @@
           </div>
         </div>
       </div>
-    
+
       <div data-reveal="0" style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:9px;"><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span><span style="color:#fff;font-size:clamp(12px,1.4vw,14px);font-weight:700;letter-spacing:.08em;">予算の考え方</span><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.4vw,16px);">
@@ -155,7 +361,7 @@
           </div>
         </div>
       </div>
-    
+
       <div data-reveal="0" style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:9px;"><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span><span style="color:#fff;font-size:clamp(12px,1.4vw,14px);font-weight:700;letter-spacing:.08em;">土地・設計・施工</span><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.4vw,16px);">
@@ -169,7 +375,7 @@
           </div>
         </div>
       </div>
-    
+
       <div data-reveal="0" style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:9px;"><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span><span style="color:#fff;font-size:clamp(12px,1.4vw,14px);font-weight:700;letter-spacing:.08em;">完成後</span><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.4vw,16px);">
@@ -183,7 +389,7 @@
           </div>
         </div>
       </div>
-    
+
       <div data-reveal="0" style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:9px;"><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span><span style="color:#fff;font-size:clamp(12px,1.4vw,14px);font-weight:700;letter-spacing:.08em;">費用</span><span style="flex:1;height:1px;background:rgba(255,255,255,.16);"></span></div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.4vw,16px);">
@@ -193,16 +399,16 @@
           </div>
           <div style="background:#fff;border-radius:4px;padding:18px 20px;color:#134887;font-size:clamp(14px,1.6vw,16px);font-weight:700;line-height:1.7;display:flex;align-items:center;gap:12px;box-shadow:0 12px 30px rgba(0,0,0,.22);">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            <span>初回相談無料／LINE5大特典</span>
+            <span>初回相談無料／LINE登録特典5点</span>
           </div>
         </div>
       </div>
-    
+
   </div>
 </section>
 
-<!-- ============ ⑤ サポート ============ -->
-<section style="background:#FAF7F3;padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
+<!-- ============ ⑦ サポート ============ -->
+<section style="background:#FAF7F3;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
   <div style="max-width:1180px;margin:0 auto;">
     <div data-reveal="0" style="text-align:center;margin-bottom:clamp(44px,5.5vw,68px);">
       <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">WHAT WE DO</span><span style="width:28px;height:1px;background:#E59545;"></span></div>
@@ -239,8 +445,8 @@
   </div>
 </section>
 
-<!-- ============ ⑥ ギャラリー ============ -->
-<section style="background:#fff;padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
+<!-- ============ ⑧ ギャラリー ============ -->
+<section style="background:#fff;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
   <div style="max-width:1280px;margin:0 auto;">
     <div data-reveal="0" style="text-align:center;margin-bottom:clamp(44px,5.5vw,64px);">
       <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">OUR WORKS</span><span style="width:28px;height:1px;background:#E59545;"></span></div>
@@ -266,23 +472,8 @@
   </div>
 </section>
 
-<!-- ============ ⑦ コーディネーター ============ -->
-<section style="background:#F5F1ED;padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
-  <div style="max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(40px,5.5vw,72px);align-items:center;">
-    <div data-reveal="0" style="position:relative;max-width:380px;width:100%;margin:0 auto;">
-      <div style="position:absolute;inset:-16px 16px 16px -16px;border:1px solid #E59545;border-radius:4px;"></div>
-      <div style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 28px 56px rgba(19,72,135,.18);"><img src="images/taniprof.jpg" alt="家づくりコーディネーター 谷 小枝" style="width:100%;height:100%;object-fit:cover;" /></div>
-    </div>
-    <div data-reveal="140">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">COORDINATOR</span></div>
-      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:24px;"><span style="font-family:'Shippori Mincho',serif;font-size:clamp(30px,3.8vw,42px);font-weight:600;color:#134887;letter-spacing:.08em;">谷 小枝</span><span style="font-size:13px;color:#4A4A4A;font-weight:500;letter-spacing:.04em;">家づくりコーディネーター</span></div>
-      <div style="position:relative;padding-left:clamp(28px,3vw,42px);"><span style="position:absolute;left:0;top:-14px;font-family:'Shippori Mincho',serif;font-size:clamp(48px,7vw,80px);line-height:1;color:rgba(229,149,69,.5);">“</span><p style="margin:0;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2.2vw,24px);line-height:1.95;color:#1f3a5c;font-weight:500;letter-spacing:.02em;">家づくりの“分からない”を一つずつ整理し、ご家族にとって最適な道を一緒に考え抜くこと。<span style="display:block;">それが私の仕事です。</span></p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ⑧ 3ステップ ============ -->
-<section style="background:#FAF7F3;padding:clamp(80px,11vw,148px) clamp(24px,6vw,64px);">
+<!-- ============ ⑨ 3ステップ ============ -->
+<section style="background:#F5F1ED;padding:clamp(72px,10vw,140px) clamp(20px,6vw,64px);">
   <div style="max-width:1180px;margin:0 auto;">
     <div data-reveal="0" style="text-align:center;margin-bottom:clamp(44px,5.5vw,64px);">
       <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;"><span style="width:28px;height:1px;background:#E59545;"></span><span style="font-size:12px;letter-spacing:.28em;font-weight:600;color:#E59545;">HOW IT WORKS</span><span style="width:28px;height:1px;background:#E59545;"></span></div>
@@ -291,46 +482,48 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:clamp(18px,2.2vw,28px);">
       <div data-reveal="0" style="background:#fff;border-radius:6px;overflow:hidden;border:1px solid rgba(19,72,135,.10);">
         <div style="position:relative;aspect-ratio:16/10;background:#06C755;display:flex;align-items:center;justify-content:center;"><svg width="46" height="46" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg><span style="position:absolute;top:14px;left:18px;font-family:'Shippori Mincho',serif;color:rgba(255,255,255,.95);font-size:36px;line-height:1;">01</span></div>
-        <div style="padding:clamp(22px,2.6vw,30px);"><h3 style="margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,21px);font-weight:600;color:#134887;letter-spacing:.03em;">LINEで友だち追加</h3><p style="margin:0;font-size:14px;line-height:1.9;color:#4A4A4A;">まずはLINE登録。<span style="display:block;white-space:nowrap;font-size:clamp(10.5px,1.3vw,13px);">家づくり5大特典をその場ですぐに受け取れます。</span></p></div>
+        <div style="padding:clamp(22px,2.6vw,30px);"><h3 style="margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,21px);font-weight:600;color:#134887;letter-spacing:.03em;">LINEで友だち追加</h3><p style="margin:0;font-size:14px;line-height:1.9;color:#4A4A4A;">まずはLINE登録。資料5点をその場ですぐに受け取れます。</p></div>
       </div>
       <div data-reveal="120" style="background:#fff;border-radius:6px;overflow:hidden;border:1px solid rgba(19,72,135,.10);">
         <div style="position:relative;aspect-ratio:16/10;overflow:hidden;"><img src="images/soudan3.jpg" alt="無料相談のようす" style="width:100%;height:100%;object-fit:cover;" /><span style="position:absolute;top:14px;left:18px;font-family:'Shippori Mincho',serif;color:#fff;font-size:36px;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.5);">02</span></div>
-        <div style="padding:clamp(22px,2.6vw,30px);"><h3 style="margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,21px);font-weight:600;color:#134887;letter-spacing:.03em;">無料相談（オンライン可）</h3><p style="margin:0;font-size:14px;line-height:1.9;color:#4A4A4A;"><span style="display:block;white-space:nowrap;font-size:clamp(10.5px,1.3vw,13px);">家づくりの不安や希望をじっくりヒアリング。</span><span style="display:block;white-space:nowrap;font-size:clamp(10.5px,1.3vw,13px);">一緒に頭の中を整理します。</span></p></div>
+        <div style="padding:clamp(22px,2.6vw,30px);"><h3 style="margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,21px);font-weight:600;color:#134887;letter-spacing:.03em;">ご希望があれば無料相談</h3><p style="margin:0;font-size:14px;line-height:1.9;color:#4A4A4A;">資料を読むだけでも問題ありません。ご希望のときだけ、LINEからご連絡ください。</p></div>
       </div>
       <div data-reveal="240" style="background:#fff;border-radius:6px;overflow:hidden;border:1px solid rgba(19,72,135,.10);">
         <div style="position:relative;aspect-ratio:16/10;overflow:hidden;"><img src="images/hb_006.jpg" alt="完成した住まい" style="width:100%;height:100%;object-fit:cover;" /><span style="position:absolute;top:14px;left:18px;font-family:'Shippori Mincho',serif;color:#fff;font-size:36px;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.5);">03</span></div>
-        <div style="padding:clamp(22px,2.6vw,30px);"><h3 style="margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,21px);font-weight:600;color:#134887;letter-spacing:.03em;">最後まで一緒に伴走</h3><p style="margin:0;font-size:14px;line-height:1.9;color:#4A4A4A;"><span style="display:block;white-space:nowrap;font-size:clamp(10.5px,1.3vw,13px);">資金・土地・建築家・工務店選びまで、</span><span style="display:block;white-space:nowrap;font-size:clamp(10.5px,1.3vw,13px);">あなたに寄り添ってサポートします。</span></p></div>
+        <div style="padding:clamp(22px,2.6vw,30px);"><h3 style="margin:0 0 10px;font-family:'Shippori Mincho',serif;font-size:clamp(17px,2vw,21px);font-weight:600;color:#134887;letter-spacing:.03em;">最後まで一緒に伴走</h3><p style="margin:0;font-size:14px;line-height:1.9;color:#4A4A4A;">資金・土地・建築家・工務店選びまで、あなたに寄り添ってサポートします。</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ⑨ 最終CTA ============ -->
-<section id="cta" style="position:relative;background:linear-gradient(160deg,#134887 0%,#0b2a52 100%);padding:clamp(84px,12vw,150px) clamp(24px,6vw,64px);overflow:hidden;">
+<!-- ============ ⑩ 最終CTA ============ -->
+<section id="cta" style="position:relative;background:linear-gradient(160deg,#134887 0%,#0b2a52 100%);padding:clamp(78px,11vw,142px) clamp(20px,6vw,64px);overflow:hidden;">
   <div style="position:absolute;top:-100px;right:-100px;width:360px;height:360px;border-radius:50%;background:rgba(229,149,69,.12);"></div>
   <div style="position:absolute;bottom:-120px;left:-80px;width:300px;height:300px;border:1px solid rgba(255,255,255,.08);border-radius:50%;"></div>
   <div style="position:relative;max-width:780px;margin:0 auto;text-align:center;">
-    <h2 data-reveal="0" style="margin:0 0 clamp(30px,4vw,44px);font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(25px,4.4vw,46px);line-height:1.6;color:#fff;letter-spacing:.03em;"><span class="nb">家づくり、何から始めればいい？</span><span class="nb">まずはLINEで相談。</span></h2>
-    <div data-reveal="100" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:clamp(28px,4vw,42px);margin-bottom:clamp(34px,4vw,46px);">
-      <div style="display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:24px;"><span style="width:24px;height:1px;background:#E59545;"></span><span style="font-family:'Shippori Mincho',serif;font-size:clamp(15px,1.9vw,19px);font-weight:600;letter-spacing:.1em;color:#fff;">家づくり 5大特典</span><span style="width:24px;height:1px;background:#E59545;"></span></div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:13px 28px;text-align:left;">
-        <div style="display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(14px,1.7vw,16px);font-weight:500;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>住宅予算チェックシート</div>
-        <div style="display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(14px,1.7vw,16px);font-weight:500;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>間取り判断リスト</div>
-        <div style="display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(14px,1.7vw,16px);font-weight:500;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>総予算計画テンプレート</div>
-        <div style="display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(14px,1.7vw,16px);font-weight:500;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>住宅会社比較シート</div>
-        <div style="display:flex;align-items:center;gap:12px;color:#fff;font-size:clamp(14px,1.7vw,16px);font-weight:500;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>家づくりの進め方ガイド</div>
+    <h2 data-reveal="0" style="margin:0 0 clamp(28px,3.6vw,42px);font-family:'Shippori Mincho',serif;font-weight:600;font-size:clamp(23px,4.2vw,44px);line-height:1.6;color:#fff;letter-spacing:.03em;"><span class="nb">家づくり、何から始めればいい？</span><span class="nb">まずは資料で整理するところから。</span></h2>
+    <div data-reveal="100" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:clamp(24px,3.6vw,40px) clamp(16px,3vw,40px);margin-bottom:clamp(32px,4vw,44px);">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:24px;"><span style="width:24px;height:1px;background:#E59545;"></span><span style="font-family:'Shippori Mincho',serif;font-size:clamp(15px,1.9vw,19px);font-weight:600;letter-spacing:.08em;color:#fff;white-space:nowrap;">家づくりスターターセット</span><span style="width:24px;height:1px;background:#E59545;"></span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:13px 28px;text-align:left;">
+        <div style="display:flex;align-items:flex-start;gap:12px;color:#fff;font-size:clamp(13.5px,1.7vw,16px);font-weight:500;line-height:1.6;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>住宅予算セルフチェックシート<span style="opacity:.6;">（Excel）</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:12px;color:#fff;font-size:clamp(13.5px,1.7vw,16px);font-weight:500;line-height:1.6;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>間取り判断チェックリスト<span style="opacity:.6;">（PDF）</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:12px;color:#fff;font-size:clamp(13.5px,1.7vw,16px);font-weight:500;line-height:1.6;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>家づくりの判断基準 要約カード<span style="opacity:.6;">（PDF）</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:12px;color:#fff;font-size:clamp(13.5px,1.7vw,16px);font-weight:500;line-height:1.6;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>家づくり生活チェックシート<span style="opacity:.6;">（Excel）</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:12px;color:#fff;font-size:clamp(13.5px,1.7vw,16px);font-weight:500;line-height:1.6;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px;"><circle cx="12" cy="12" r="11" fill="#E59545"></circle><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>総予算計画書テンプレート<span style="opacity:.6;">（Excel）</span></span></div>
       </div>
     </div>
-    <a data-reveal="200" href="https://lin.ee/8MXc8uF" style="display:inline-flex;align-items:center;gap:13px;background:#06C755;color:#fff;font-weight:700;font-size:clamp(16px,2.2vw,20px);letter-spacing:.03em;padding:21px 44px;border-radius:999px;box-shadow:0 16px 42px rgba(6,199,85,.45);transition:transform .25s,box-shadow .25s;" data-style-hover="transform:translateY(-3px);box-shadow:0 22px 50px rgba(6,199,85,.55);">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
-      <span>LINEで5大特典を受け取る</span>
-    </a>
-    <p data-reveal="280" style="margin:18px 0 0;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.03em;line-height:1.7;">※LINEアプリが開きます｜無理な勧誘は一切ありません</p>
+    <div class="hb-cta-wrap" data-reveal="200">
+      <a href="https://lin.ee/8MXc8uF" class="hb-cta">
+        <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+        家づくり資料を無料で受け取る
+      </a>
+    </div>
+    <p data-reveal="280" style="margin:18px 0 0;font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.03em;line-height:1.7;">※LINEアプリが開きます｜営業電話は一切ありません</p>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer style="background:#0b2342;padding:clamp(44px,6vw,64px) clamp(24px,6vw,64px);">
+<footer style="background:#0b2342;padding:clamp(44px,6vw,64px) clamp(20px,6vw,64px);">
   <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;">
     <img src="images/hb_logo.svg" alt="ハウス・ブリッジ" style="height:44px;width:auto;filter:brightness(0) invert(1);opacity:.95;" />
     <div style="display:flex;flex-direction:column;gap:9px;">
@@ -341,9 +534,9 @@
 </footer>
 
 <!-- ============ 追従ボタン ============ -->
-<a id="floatBtn" href="#cta" style="position:fixed;right:clamp(14px,3vw,28px);bottom:clamp(14px,3vw,28px);z-index:120;display:inline-flex;align-items:center;gap:10px;background:#06C755;color:#fff;font-weight:700;font-size:14px;letter-spacing:.03em;padding:14px 22px;border-radius:999px;box-shadow:0 12px 32px rgba(6,199,85,.5);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .4s,transform .4s,box-shadow .25s;" data-style-hover="box-shadow:0 16px 38px rgba(6,199,85,.62);">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
-  <span>LINEで相談</span>
+<a id="floatBtn" href="https://lin.ee/8MXc8uF" class="hb-cta-pill" style="position:fixed;right:clamp(12px,3vw,28px);bottom:clamp(12px,3vw,28px);z-index:120;font-size:14px;padding:14px 20px;box-shadow:0 12px 32px rgba(6,199,85,.5);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .4s,transform .4s,box-shadow .25s;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" style="flex:none;"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.7 3.8 6.2-.2.7-.7 2.3-.8 2.7 0 .2.1.4.4.2.3-.2 2.6-1.7 3.6-2.4.9.2 2 .3 3 .3 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+  <span>家づくり資料を無料で受け取る</span>
 </a>
 
 </div>
@@ -373,7 +566,7 @@
   function setupHeader(){
     if(!header)return;
     var mobile=window.innerWidth<760;
-    header.style.paddingTop=mobile?'max(env(safe-area-inset-top, 0px), 52px)':'clamp(34px,3.6vw,46px)';
+    header.style.paddingTop=mobile?'max(env(safe-area-inset-top, 0px), 40px)':'clamp(34px,3.6vw,46px)';
   }
   window.expandGallery=function(){
     galleryExpanded=true;
