@@ -60,7 +60,7 @@
                 <span class="text-accent-orange">5つの特典</span>
             </h1>
             <p class="mt-3 text-sm md:text-base text-white/80">
-                下記より各特典をダウンロードしてご活用ください
+                ボタン1つで、5点すべてをまとめて受け取れます
             </p>
         </div>
     </header>
@@ -68,14 +68,58 @@
     <!-- Gift List -->
     <main class="max-w-3xl mx-auto px-4 py-10 md:py-14">
 
+        <!-- LINE内ブラウザ案内（該当端末のみJSで表示） -->
+        <div id="inapp-notice" style="display:none" class="bg-white border-2 border-accent-orange rounded-xl p-4 md:p-5 mb-6 text-sm md:text-base">
+            <p class="font-bold text-accent-orange mb-1">ダウンロードできない場合はこちら</p>
+            <p class="text-gray-700 mb-3">
+                LINEアプリ内のブラウザでは、ファイルの保存ができないことがあります。<br>
+                下のボタンから、いつものブラウザで開き直してください。
+            </p>
+            <a id="open-external" href="#" rel="noopener"
+               class="inline-flex items-center gap-2 bg-accent-orange text-white font-bold text-sm md:text-base px-5 py-2.5 rounded-full btn-hover transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                Safari / Chrome で開く
+            </a>
+        </div>
+
+        <!-- 一括ダウンロード -->
+        <section class="bg-white rounded-2xl shadow-md border-2 border-accent-orange p-6 md:p-8 mb-8 text-center">
+            <p class="inline-block bg-accent-orange text-white text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-3">
+                いちばんかんたんな受け取り方
+            </p>
+            <h2 class="text-xl md:text-2xl font-bold text-main-green mb-3 leading-snug">
+                5つの特典を<br class="md:hidden">まとめてダウンロード
+            </h2>
+            <p class="text-sm md:text-base text-gray-600 mb-6">
+                下のボタンをタップすると、5点すべてが1つのファイル（ZIP形式・約250KB）で保存されます。
+            </p>
+            <a id="bulk-download" href="./files/housebridge_gift_set.zip" download="家づくりスターターセット.zip"
+               class="inline-flex items-center justify-center gap-2 w-full md:w-auto bg-accent-orange text-white font-bold text-base md:text-lg px-8 py-4 rounded-full btn-hover transition-all shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
+                5点まとめてダウンロード
+            </a>
+            <p class="mt-5 text-xs md:text-sm text-gray-500 leading-relaxed">
+                保存したファイルをタップすると自動で展開され、5点の資料をご覧いただけます。<br>
+                （iPhoneは「ファイル」アプリ、Androidは「Files」アプリに保存されます）
+            </p>
+        </section>
+
         <!-- Notice -->
         <div class="bg-white border-l-4 border-main-green rounded-r-lg p-4 md:p-5 mb-8 text-sm md:text-base">
             <p class="font-bold text-main-green mb-1">ご利用にあたって</p>
             <ul class="list-disc pl-5 text-gray-600 space-y-1">
                 <li>各特典はスマートフォン・パソコンの両方でご利用いただけます</li>
+                <li>1点ずつ受け取りたい場合は、下の一覧から個別にダウンロードできます</li>
                 <li>Excel形式は表計算アプリ、PDF形式はブラウザやPDFアプリでご覧ください</li>
                 <li>ご不明点はLINEトークよりお気軽にご質問ください</li>
             </ul>
+        </div>
+
+        <!-- 個別ダウンロード見出し -->
+        <div class="flex items-center gap-4 mt-12 mb-6">
+            <span class="flex-1 h-px bg-main-green/20"></span>
+            <h2 class="text-base md:text-lg font-bold text-main-green whitespace-nowrap">1点ずつダウンロードする</h2>
+            <span class="flex-1 h-px bg-main-green/20"></span>
         </div>
 
         <!-- Gift 1 -->
@@ -88,7 +132,7 @@
                     <p class="text-sm md:text-base text-gray-600 mb-4">
                         年収・家族構成・支出から、無理のない住宅予算を自分で診断できるシートです。「いくらまで借りられるか」ではなく「いくらまでなら無理なく返せるか」を可視化します。
                     </p>
-                    <a href="./files/特典①：住宅予算セルフチェックシート.xlsx" download
+                    <a href="./files/特典①：住宅予算セルフチェックシート.xlsx" data-gift="01_住宅予算セルフチェックシート" download
                        class="inline-flex items-center gap-2 bg-main-green text-white font-bold text-sm md:text-base px-6 py-3 rounded-full btn-hover transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
                         ダウンロード（Excel）
@@ -107,7 +151,7 @@
                     <p class="text-sm md:text-base text-gray-600 mb-4">
                         「この間取りで本当に大丈夫？」を判断するためのチェック項目集。動線・採光・収納・将来性など、見落としがちな観点をまとめました。
                     </p>
-                    <a href="./files/特典②：間取り判断チェックリスト.pdf" target="_blank" rel="noopener"
+                    <a href="./files/特典②：間取り判断チェックリスト.pdf" data-gift="02_間取り判断チェックリスト" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 bg-main-green text-white font-bold text-sm md:text-base px-6 py-3 rounded-full btn-hover transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
                         ダウンロード（PDF）
@@ -126,7 +170,7 @@
                     <p class="text-sm md:text-base text-gray-600 mb-4">
                         家づくりで迷ったときに立ち返るための判断軸を1枚に集約。営業トークに流されず、自分たちの基準で選ぶための「お守り」としてご活用ください。
                     </p>
-                    <a href="./files/特典③：家づくりの判断基準要約カード.pdf" target="_blank" rel="noopener"
+                    <a href="./files/特典③：家づくりの判断基準要約カード.pdf" data-gift="03_家づくりの判断基準要約カード" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2 bg-main-green text-white font-bold text-sm md:text-base px-6 py-3 rounded-full btn-hover transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
                         ダウンロード（PDF）
@@ -145,7 +189,7 @@
                     <p class="text-sm md:text-base text-gray-600 mb-4">
                         今の暮らしの「不満」と「叶えたいこと」を書き出して、家づくりの要望を整理するためのシート。ご家族での話し合いにもそのまま使えます。
                     </p>
-                    <a href="./files/特典④：家づくり生活チェックシート.xlsx" download
+                    <a href="./files/特典④：家づくり生活チェックシート.xlsx" data-gift="04_家づくり生活チェックシート" download
                        class="inline-flex items-center gap-2 bg-main-green text-white font-bold text-sm md:text-base px-6 py-3 rounded-full btn-hover transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
                         ダウンロード（Excel）
@@ -164,7 +208,7 @@
                     <p class="text-sm md:text-base text-gray-600 mb-4">
                         土地・建物本体・諸費用・外構・家具家電まで、家づくりにかかる全費用を1枚で計画できるテンプレート。後から発生する「想定外の出費」を防ぎます。
                     </p>
-                    <a href="./files/特典⑤：総予算計画書テンプレート.xlsx" download
+                    <a href="./files/特典⑤：総予算計画書テンプレート.xlsx" data-gift="05_総予算計画書テンプレート" download
                        class="inline-flex items-center gap-2 bg-main-green text-white font-bold text-sm md:text-base px-6 py-3 rounded-full btn-hover transition-all">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"/></svg>
                         ダウンロード（Excel）
@@ -193,6 +237,39 @@
     <footer class="bg-main-green text-white/70 text-center text-xs md:text-sm py-6">
         <p>&copy; ハウス・ブリッジ All Rights Reserved.</p>
     </footer>
+
+    <script>
+    (function () {
+        // LINEアプリ内ブラウザではファイル保存に失敗することがあるため、外部ブラウザへの導線を出す
+        var ua = navigator.userAgent || '';
+        if (/Line\//i.test(ua)) {
+            var notice = document.getElementById('inapp-notice');
+            var link = document.getElementById('open-external');
+            if (notice && link) {
+                var url = location.href.split('#')[0];
+                link.href = url + (url.indexOf('?') === -1 ? '?' : '&') + 'openExternalBrowser=1';
+                notice.style.display = 'block';
+            }
+        }
+
+        // ダウンロードをGTMのdataLayerへ送る
+        window.dataLayer = window.dataLayer || [];
+        var bulk = document.getElementById('bulk-download');
+        if (bulk) {
+            bulk.addEventListener('click', function () {
+                window.dataLayer.push({ event: 'gift_download', gift_type: 'bulk_zip', gift_name: '5点一括' });
+            });
+        }
+        var singles = document.querySelectorAll('a[data-gift]');
+        for (var i = 0; i < singles.length; i++) {
+            (function (a) {
+                a.addEventListener('click', function () {
+                    window.dataLayer.push({ event: 'gift_download', gift_type: 'single', gift_name: a.getAttribute('data-gift') });
+                });
+            })(singles[i]);
+        }
+    })();
+    </script>
 
 </body>
 </html>
